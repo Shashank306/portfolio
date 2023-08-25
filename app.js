@@ -42,3 +42,28 @@ function PageTransitions(){
 }
 
 PageTransitions();
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzB0xBOkz18QrN9ip_iLly_8CvVOySLURP1q4fBg4DY3K7uiZSuwBr1Cx4RebTphMUv/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        msg.innerHTML = "Message Sent Successfuly👍"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+})
+
+var typed = new typed(".text",{
+    String:["Student", "Machine Learning Engineer", "Frontend Developer"],
+    typespeed:100,
+    backspeed:100,
+    backDelay:1000,
+    loop:true
+});

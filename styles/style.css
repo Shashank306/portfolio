@@ -661,6 +661,25 @@ section {
   display: flex;
   justify-content: flex-start;
 }
+.contact-content-con .right-contact .btn.btn-2 {
+  display: inline-block;
+  border-radius: 30px;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.8rem 1.1rem;
+  outline: none;
+  border: none;
+  background-color: var(--color-grey-5);
+  width: 20%;
+  background: var(--color-secondary);
+  cursor: pointer;
+}
+.contact-content-con .right-contact #msg {
+  color: var(--color-secondary);
+  margin-top: -2px;
+  display: block;
+}
 
 /* Independed components */
 .btn-con {
