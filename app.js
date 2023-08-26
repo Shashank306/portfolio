@@ -60,10 +60,10 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message))
 })
 
-var typed = new typed(".text",{
-    String:["Student", "Machine Learning Engineer", "Frontend Developer"],
-    typespeed:100,
-    backspeed:100,
+var typed = new Typed(".text",{
+    strings:["Student At JUIT", "Machine Learning Engineer", "Frontend Developer"],
+    typespeed:500,
+    backspeed:500,
     backDelay:1000,
     loop:true
 });
